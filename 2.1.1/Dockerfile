@@ -99,7 +99,7 @@ RUN buildDeps=' \
  && cd /usr/src && mkdir couchdb \
  #&& curl -fSL https://dist.apache.org/repos/dist/release/couchdb/source/$COUCHDB_VERSION/apache-couchdb-$COUCHDB_VERSION.tar.gz -o couchdb.tar.gz \
  #&& curl -fSL https://dist.apache.org/repos/dist/release/couchdb/source/$COUCHDB_VERSION/apache-couchdb-$COUCHDB_VERSION.tar.gz.asc -o couchdb.tar.gz.asc \
- && wget -O couchdb.tar.gz "https://github.com/vnezapno/couchdb/archive/${COUCHDB_FT_VERSION}.tar.gz"; \
+ && wget -O couchdb.tar.gz "https://github.com/vnezapno/couchdb/archive/${COUCHDB_FT_VERSION}.tar.gz" \
  #&& gpg --batch --verify couchdb.tar.gz.asc couchdb.tar.gz \
  && tar -xzf couchdb.tar.gz -C couchdb --strip-components=1 \
  && cd couchdb \
